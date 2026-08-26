@@ -1,0 +1,387 @@
+.container {
+    padding: 24px 40px;
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    min-width: 70vw;
+    text-decoration: none;
+}
+
+
+.brand {
+    margin-bottom: 48px;
+}
+.logo {
+    font-family: 'Geist', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffb4a3;
+    margin: 0;
+}
+.tagline {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 12px;
+    color: #e1bfb8;
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.startSessionBtn {
+    width: 100%;
+    background-color: #ff6b4a;
+    color: #661000;
+    height: 48px;
+    border-radius: 9999px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.15s;
+}
+.startSessionBtn:active {
+    transform: scale(0.95);
+}
+
+/* ================= ХЕДЕР ================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header h2 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    margin: 0;
+}
+
+/* Search & Actions в хедере */
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.search-bar {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+/* ================= КОНТЕНТ И СЕТКА ================= */
+.main {
+    padding: 96px 40px 48px 40px;
+}
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.colSpan4 {
+    grid-column: span 4;
+}
+.colSpan6 {
+    grid-column: span 6;
+}
+.colSpan8 {
+    grid-column: span 8;
+}
+
+.bentoCard {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    transition: all 0.3s ease;
+    padding: 24px;
+}
+.bentoCard:hover {
+    border-color: rgba(255, 107, 74, 0.3);
+    box-shadow: 0 0 40px rgba(255, 107, 74, 0.05);
+}
+
+/* Карточка профиля */
+.profileHeader {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.avatarLarge {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid #ffb4a3;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.userName {
+    font-family: 'Geist', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+.userDetails {
+    font-size: 18px;
+    color: #e1bfb8;
+    margin: 0;
+}
+
+/* Карточки статистики */
+.statCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.statTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.iconPrimary {
+    color: #ffb4a3;
+    background-color: rgba(255, 180, 163, 0.1);
+    padding: 8px;
+    border-radius: 12px;
+}
+.iconTertiary {
+    color: #56d9d8;
+    background-color: rgba(86, 217, 216, 0.1);
+    padding: 8px;
+    border-radius: 12px;
+}
+.statBadge {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 12px;
+    color: #ffb4a3;
+    font-weight: 500;
+}
+.statBottom {
+    margin-top: 48px;
+}
+.statLabel {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 12px;
+    color: #e1bfb8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 8px 0;
+}
+.statValue {
+    font-family: 'Geist',
+    sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* График */
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.cardTitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+}
+.dots {
+    display: flex;
+    gap: 8px;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.dotActive {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffb4a3;
+}
+
+.chartBars {
+    height: 160px;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 0 16px;
+}
+.bar {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.2s;
+}
+.bar:hover {
+    background-color: rgba(255, 180, 163, 0.5);
+}
+.barActive {
+    background-color: rgba(255, 180, 163, 0.8);
+    box-shadow: 0 0 20px rgba(255, 107, 74, 0.2);
+}
+.chartLabels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 12px;
+    color: #e1bfb8;
+}
+
+/* Настройки (Toggles) */
+.settingsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+.settingItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    cursor: pointer;
+}
+.settingInfo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.settingIcon {
+    color: #e1bfb8;
+}
+.settingName {
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+.settingDesc {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 12px;
+    color: #e1bfb8;
+    margin: 4px 0 0 0;
+}
+
+.toggle {
+    width: 48px;
+    height: 24px;
+    border-radius: 9999px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+.toggleOn {
+    background-color: #ffb4a3;
+}
+.toggleOff {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.toggleThumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    transition: all 0.3s;
+}
+.toggleOn .toggleThumb {
+    background-color: #ffffff;
+    right: 4px;
+}
+.toggleOff .toggleThumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    left: 4px;
+}
+
+/* Кнопки (Account Preferences) */
+.actionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+}
+.actionBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    color: #e1bfb8;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.actionBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+.actionBtn span:last-child {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 12px;
+}
+
+/* Нижний баннер */
+.bannerCard {
+    grid-column: span 12;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 256px;
+    position: relative;
+    background-color: #1a1a1a;
+}
+.bannerOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #1d100e, transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 48px;
+}
+.bannerTitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.bannerText {
+    font-size: 16px;
+    color: #e1bfb8;
+    max-width: 600px;
+    margin: 0;
+    line-height: 1.5;
+}

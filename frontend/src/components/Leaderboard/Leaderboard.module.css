@@ -1,0 +1,358 @@
+.container {
+    padding: 24px 40px;
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    min-width: 70vw;
+    text-decoration: none;
+}
+
+.brand {
+    margin-bottom: 48px;
+}
+
+.logo {
+    font-family: 'Geist', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffb4a3;
+    letter-spacing: -0.05em;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #e1bfb8;
+    opacity: 0.6;
+    margin: 0;
+}
+
+.startSessionBtn {
+    margin-top: auto;
+    background-color: #ff6b4a;
+    color: #661000;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.startSessionBtn:active {
+    transform: scale(0.95);
+}
+
+.contentWrapper {
+    margin-left: 256px;
+    width: calc(100% - 256px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent-soft);
+    letter-spacing: -1px;
+}
+
+/* Search & Actions в хедере */
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.search-bar {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.main {
+    padding: 40px;
+}
+
+.loader {
+    text-align: center;
+    color: #ffb4a3;
+    margin-top: 100px;
+    font-size: 18px;
+}
+
+.podiumGrid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.podiumColSide {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.podiumColCenter {
+    grid-column: span 4;
+}
+
+.bentoCard {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+}
+
+.cardContent {
+    padding: 32px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scaleUp {
+    transform: scale(1.05);
+}
+
+.goldGlow {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.silverGlow {
+    box-shadow: 0 0 30px rgba(192, 192, 192, 0.15);
+    border: 1px solid rgba(192, 192, 192, 0.3);
+}
+
+.bronzeGlow {
+    box-shadow: 0 0 30px rgba(205, 127, 50, 0.15);
+    border: 1px solid rgba(205, 127, 50, 0.3);
+}
+
+.crownIcon {
+    color: #eab308;
+    margin-bottom: 8px;
+}
+
+.avatarWrapper {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.avatarPlaceholder {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-family: 'Geist', sans-serif;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.avatarLarge {
+    width: 128px;
+    height: 128px;
+    border-width: 4px;
+    font-size: 48px;
+}
+
+.borderGold { border-color: #eab308; color: #eab308; }
+.borderSilver { border-color: #94a3b8; color: #94a3b8; }
+.borderBronze { border-color: #c2410c; color: #c2410c; }
+
+.rankBadge {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #1d100e;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+}
+
+.bgGold { background-color: #eab308; font-size: 14px; padding: 4px 16px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+.bgSilver { background-color: #94a3b8; }
+.bgBronze { background-color: #c2410c; }
+
+.userName { font-family: 'Geist', sans-serif; font-size: 24px; margin: 0 0 8px 0; }
+.userNameLarge { font-family: 'Geist', sans-serif; font-size: 32px; margin: 0 0 8px 0; }
+.userTitle { font-family: 'JetBrains Mono', sans-serif; font-size: 12px; color: #94a3b8; margin: 0 0 24px 0; }
+.userTitleGold { font-family: 'JetBrains Mono', sans-serif; font-size: 12px; color: #eab308; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 24px 0; }
+.scoreValue { color: #ffb4a3; font-family: 'Geist', sans-serif; font-size: 32px; font-weight: 600; }
+.scoreValueLarge { color: #ffb4a3; font-family: 'Geist', sans-serif; font-size: 48px; font-weight: 600; }
+.scoreLabel { font-family: 'JetBrains Mono', sans-serif; font-size: 12px; opacity: 0.6; margin: 0; }
+
+.tableContainer {
+    overflow: hidden;
+}
+
+.tableHeader {
+    padding: 24px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.tableTitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.tableFilters {
+    display: flex;
+    gap: 16px;
+}
+
+.filterBtnOutline {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: #f6ddd8;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filterBtnActive {
+    background-color: #ffb4a3 !important;
+    color: #630f00 !important;
+    font-weight: 700;
+    border: 1px solid transparent;
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.thead {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.th {
+    padding: 16px 32px;
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 12px;
+    color: #e1bfb8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s;
+}
+
+.tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.td {
+    padding: 16px 32px;
+}
+
+.rankNum {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 14px;
+}
+
+.userRow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatarSmall {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.userNameText {
+    font-weight: 500;
+}
+
+.focusBadge {
+    padding: 4px 12px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #e1bfb8;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.scoreNum {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 14px;
+}
+
+.tableFooter {
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.loadMoreBtn {
+    background: transparent;
+    border: none;
+    color: #ffb4a3;
+    font-family: 'JetBrains Mono', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.loadMoreBtn:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #0B0E14;
+    --accent: #FF6B4A;
+    --accent-soft: #ffb4a3;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.08);
+    --text-main: #f6ddd8;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+}
+
+.timer-wrapper {
+    padding: 40px;
+    max-width: 1330px;
+    margin: 0 auto;
+}
+
+.timer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header-title h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent-soft);
+    letter-spacing: -1px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.search-bar {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "timer timer progress"
+        "timer timer mode"
+        "token token token";
+    gap: 24px;
+}
+
+.current-task {
+    color: #fca18c;
+    margin-bottom: 30px;
+}
+
+.current-task span{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.current-task h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.timer-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    grid-area: timer;
+    justify-content: space-around;
+    min-height: 400px;
+}
+
+.timer-display {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.timer-text {
+    position: absolute; /* Ставим текст прямо в центр SVG */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time {
+    font-size: 84px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    margin-top: 10px;
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.today-progress {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 30px;
+    position: relative;
+
+    grid-area: progress;
+}
+
+.deep-focus-mode{
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 30px;
+    position: relative;
+
+    grid-area: mode;
+}
+
+.up-next{
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    grid-area: token;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.up-next > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Общие стили для карточек (стеклянный эффект) */
+.today-progress, .deep-focus-mode, .up-next {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 30px;
+    backdrop-filter: blur(10px); /* Тот самый эффект матового стекла */
+}
+
+/* Секция Today's Progress */
+.icon-accent {
+    color: var(--accent);
+    align-self: start;
+}
+
+.today-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.today-progress-header {
+    font-size: 18px;
+    font-weight: 700;
+    align-self: start;
+}
+
+.today-progress-text {
+    font-size: 14px;
+    opacity: 0.6;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.today-progress-container {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--accent);
+    box-shadow: 0 0 15px var(--accent); /* Свечение полоски */
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Секция Deep Focus Mode */
+.mode-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.mode-title-group {
+    text-align: left;
+    margin-top: 3px;
+}
+
+.status-subtext {
+    padding-top: 3px;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 107, 74, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+.mode-description {
+    font-size: 13px;
+    opacity: 0.5;
+    line-height: 1.6;
+}
+
+/* Кнопки управления таймером */
+.control-btn {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.play {
+    background: var(--accent);
+    width: 80px;
+    height: 80px;
+    border: none;
+    box-shadow: 0 0 20px rgba(255, 107, 74, 0.4);
+}
+
+.play:hover {
+    background: #ff856b;
+    transform: scale(1.05);
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.3s ease; /* Плавное движение круга */
+    transform: rotate(-90deg); /* Чтобы круг начинался сверху */
+    transform-origin: 50% 50%;
+
+}
+
+.up-next-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    padding: 12px 12px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-main);
+}
+
+.edit-schedule-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-schedule-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.up-next-info-text {
+    text-align: left;
+}
